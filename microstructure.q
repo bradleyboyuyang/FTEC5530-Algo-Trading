@@ -1,4 +1,3 @@
-/ D代表date，S代表string，T代表time，F代表float，导入表前先告知数据类型，第二节课件上有
 t: ("DSTFF";enlist ",") 0:`$"D:\\OneDrive - CUHK-Shenzhen\\FTEC5530\\Lecture_Materials\\lec3\\trade.csv";
 q: ("DSTFFFF";enlist ",") 0:`$"D:\\OneDrive - CUHK-Shenzhen\\FTEC5530\\Lecture_Materials\\lec3\\quote.csv";
 
@@ -46,16 +45,13 @@ select avg volpct by minute from m where sym=`600030.SHSE
 / 5min volpct
 select sum volpct by 5 xbar minute from select avg volpct by minute from m where sym=`600030.SHSE
 
-
-
 select count i by date,sym from m5
 
-/ lj, uj指令合并table
-/ save指令存放Excel表，可以后续在Excel中继续美化
+/ lj, uj: merge table
+/ save keywork
 
 / qstudio
-/ add server, port:28111, \a指令在qstudio里面打开表格，在cmd里面\p 28111然后网页打开localhost:28111即可查看所有变量，qstudio里面ctrl+enter运行行
-/ 双斜杠退出程序
+/ add server, port:28111, \a command open the table in kdb
 
 
 
